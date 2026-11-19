@@ -14,9 +14,9 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const { judul, mataKuliah, pertemuan, tautan } = req.body;
+    const { judul, mataKuliah, mata_kuliah, pertemuan, tautan } = req.body;
     const cleanJudul = String(judul ?? "").trim();
-    const cleanMataKuliah = String(mataKuliah ?? "").trim();
+    const cleanMataKuliah = String(mataKuliah ?? mata_kuliah ?? "").trim();
     const angkaPertemuan = Number(pertemuan);
 
     if (
